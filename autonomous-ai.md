@@ -43,7 +43,14 @@ Similarly Ultrasonic sensors could be useful while parking in confined spaces li
 
 
 ## Architecture
-### End to End Learning vs Modular
+### End to End Learning
+End-to-End learning is probably the holy grail for autonomous navigation but is harder to achieve in practice. Driving is much harder state space but simpler set of actions unlike self-play games like Go. Wayve is a London-based company that is approaching self-driving cars with end-to-end learning approach.
+
+![alt text](https://github.com/harishbalasub/harishbalasub.github.io/blob/master/docs/assets/img/Tesla-e2e-learning.png)
+### Modular
+Most companies (like Tesla, Waymo) go for the modular architecture approach. It allows teams to focus and build, optimize and debug various modules independently.
+
+<img src="https://github.com/harishbalasub/harishbalasub.github.io/blob/master/docs/assets/img/Tesla-modular.png" width="500" height="250">
 
 ### Tesla Architecture
 
