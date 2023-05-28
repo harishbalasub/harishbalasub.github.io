@@ -48,13 +48,22 @@ End-to-End learning is probably the holy grail for autonomous navigation but is 
 
 ![alt text](https://github.com/harishbalasub/harishbalasub.github.io/blob/master/docs/assets/img/Tesla-e2e-learning.png)
 ### Modular
-Most companies (like Tesla, Waymo) go for the modular architecture approach. It allows teams to focus and build, optimize and debug various modules independently.
+Most companies (like Tesla, Waymo) go for the modular architecture approach. It allows teams to focus and build, optimize and debug various modules independently. Below is an example of a modular architecture.
 
 <img src="https://github.com/harishbalasub/harishbalasub.github.io/blob/master/docs/assets/img/Tesla-modular.png" width="500" height="250">
 
 ### Tesla Architecture
+The Tesla architecture is vision based. The vision subsystem converts the input camera data into an intermediate vector space for use by planning and control subsystems.
+The vision subsystem is fully NN based. The vector space representation has changed from 2D to recently 3D space (occupancy networks). The planning module is partly NN based heuristics and part explicit coding. Elon recently hinted that v12 FSD beta will be fully end to end ai, perhaps entire planning may be NN or AI based without any explicit coding.
 
-## Vision System
+
+
+<img src="https://github.com/harishbalasub/harishbalasub.github.io/blob/master/docs/assets/img/Tesla-fsd-arch.png" width="500" height="250">
+
+### Vision subsystem
+
+### Control subsystem
+Cars like GM use model predictive control (MPC) for various applications like adaptive cruise control, lane-keeping, lane following etc. MPC is useful to match predicted trajectory with actual trajectory.
 
 ## Risks and Challenges
 Videos
