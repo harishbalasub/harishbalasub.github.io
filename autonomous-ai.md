@@ -60,10 +60,26 @@ The vision subsystem is fully NN based. The vector space representation has chan
 
 <img src="https://github.com/harishbalasub/harishbalasub.github.io/blob/master/docs/assets/img/Tesla-fsd-arch.png" width="500" height="250">
 
-### Vision subsystem
+### Vision subsystemTesla vision uses a Hydranet architecture where the multi-camera image inputs are pre-processed through CNN+Transformer+Spatio-Temporal module and used as inputs for various vision processing tasks.
+
+Lets look at the vision architecture before Tesla started moving to 3D Occupancy network based intermediate vector space
+
+<img src="https://github.com/harishbalasub/harishbalasub.github.io/blob/master/docs/assets/img/Tesla-fsd-arch-vision-2D.png" width="50%" height="50%">
+
+#### Why video module?
+Single frame processing is not sufficient to recall temporary occlusions and traffic signs, detect velocity/flow. This requires processing of a sequence of frames (in order of seconds) with a spatial and temporal feature queue. For efficient processing, a small region around the ego car is used and a spatial RNN is run over each block in the region. 
+
+<img src="https://github.com/harishbalasub/harishbalasub.github.io/blob/master/docs/assets/img/Tesla-fsd-arch-vision-video-2D.png" width="400" height="400">
+
+#### Moving to Occupancy Networks
+
+### Planning subsystem
+#### Lane guidance module
 
 ### Control subsystem
 Cars like GM use model predictive control (MPC) for various applications like adaptive cruise control, lane-keeping, lane following etc. MPC is useful to match predicted trajectory with actual trajectory.
+
+## Training and Simulation
 
 ## Risks and Challenges
 Videos
