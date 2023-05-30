@@ -73,12 +73,32 @@ Single frame processing is not sufficient to recall temporary occlusions and tra
 <img src="https://github.com/harishbalasub/harishbalasub.github.io/blob/master/docs/assets/img/Tesla-fsd-arch-vision-video-2D.png" width="400" height="400">
 
 #### Moving to Occupancy Networks
+Moving from 2D vector space to 3D Occupancy network provides some advantages
+
+<img src="https://github.com/harishbalasub/harishbalasub.github.io/blob/master/docs/assets/img/Tesla-fsd-arch-2Dvs3D-1.png" >
+<img src="https://github.com/harishbalasub/harishbalasub.github.io/blob/master/docs/assets/img/Tesla-fsd-arch-2Dvs3D-2.png" >
+<img src="https://github.com/harishbalasub/harishbalasub.github.io/blob/master/docs/assets/img/Tesla-fsd-arch-2Dvs3D-3.png" >
+
+The updated architecture for generating 3D occupancy network and flow is shown below
+<img src="https://github.com/harishbalasub/harishbalasub.github.io/blob/master/docs/assets/img/Tesla-fsd-arch-vision-3D.png" >
+
+#### Validation of depth and velocity from vision
+The depth and velocity information output vision based multi-camera fusion and video module (blue) has been found to be similar in performance to radar output (green) as shown in the figure below. The single camera based predictions are provided to illustrate the utility of the multi-camera fusion model.
+
+<img src="https://github.com/harishbalasub/harishbalasub.github.io/blob/master/docs/assets/img/Tesla-fsd-arch-vision-vs-radar.png" >
 
 ### Planning subsystem
 #### Lane guidance module
+Detecting lane trajectories in unmarked areas especially intersections is a challenge and doing it in image space is not efficient. Tesla FSD uses autoregressive decoders (decoder stage of a Transfomer) to predict all the lane trajectory options from a given start point along with the spline coefficients.
+
+<img src="https://github.com/harishbalasub/harishbalasub.github.io/blob/master/docs/assets/img/Tesla-fsd-arch-lane-guidance.png" >
+
+<img src="https://github.com/harishbalasub/harishbalasub.github.io/blob/master/docs/assets/img/Tesla-fsd-arch-lane-language-2.png" >
+
 
 ### Control subsystem
 Cars like GM use model predictive control (MPC) for various applications like adaptive cruise control, lane-keeping, lane following etc. MPC is useful to match predicted trajectory with actual trajectory.
+
 
 ## Training and Simulation
 
