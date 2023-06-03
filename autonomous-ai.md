@@ -102,6 +102,19 @@ Cars like GM use model predictive control (MPC) for various applications like ad
 
 ## Training and Simulation
 ### Need for end to end simulation
+Before every firmware update, demonstrating vehicle safety over several million miles of various driving scenarios can be desired. Modular testing of individual modules not sufficient. Use of graphics engines to create synthetic driving environments does not recreate realistic real-world situations.
+To recreate real-world situations closer to reality, a more augmented reality simulation is required. The concept of Neural Radial Fields (Nerf) allows recreating 3D scene from set of 2D images captured during a test drive. This allows creating sensor data which can be trained to recreate photo-realistic camera images.
+
+<img src="https://github.com/harishbalasub/harishbalasub.github.io/blob/master/docs/assets/img/Tesla-e2e-neural-sim.png" >
+<img src="https://github.com/harishbalasub/harishbalasub.github.io/blob/master/docs/assets/img/Tesla-e2e-nerfs.png" >
+
+End to End simulation enables
+* Scene reconstruction (pick a problematic intersection in a city, add in weather conditions etc)
+* Object reconstruction & retrieval (add/remove vehicles, pedestrians etc)
+* Traffic modelling
+* Sensor simulation
+* Adversarial scenario generation
+
 ## Risks and Challenges
 Videos
 
