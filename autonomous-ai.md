@@ -1,8 +1,10 @@
 # AI for Autonomous Navigation - Tesla
 
 ## Some autonomous systems in use
-Vaccum robots are some of the most successful home robots in use. Some vaccum robot models like iRobot Roomba (launched in 2002) use a camera for [visual SLAM](https://www.technologyreview.com/2015/09/16/247936/the-roomba-now-sees-and-maps-a-home/) (Simultaneous Localization and Mapping), other models like Neato D10 use 2D Lidar for SLAM. Use of a Lidar indoors allows it to work in dark areas, enables faster mapping and a
-ords more privacy for residents. Neato Robotics after 18 years is now being shutdown due to underperformance. iRobot has been acquired by Amazon leading to monopoly and more privacy concerns.
+An example of a widely used autonomous system in use - Vaccum robots. Some vaccum robot models like iRobot Roomba (launched in 2002) used a camera for [visual SLAM](https://www.technologyreview.com/2015/09/16/247936/the-roomba-now-sees-and-maps-a-home/) (Simultaneous Localization and Mapping). Dyson 360 eye vaccuum robot uses monoSLAM which enables single-camera real-time SLAM. Vision based SLAM is used in ARKit, Oculus/Hololens, Drones (DJI, Skydio) and also in Kinect controllers which uses Dense SLAM.
+Other models like Neato D10 use 2D Lidar for SLAM. Use of a Lidar indoors allows it to work in dark areas, enables faster mapping and affords more privacy for residents. 
+
+The technology behind SLAM is evolving from robust localization and mapping to a need for richer semantic scene understanding. Challenges for a perception and planning system in Autonomous cars are much higher.
 
 ## Tesla HW and SW evolution
 The [hardware releases](https://en.wikipedia.org/wiki/Tesla_Autopilot#Hardware) so far
